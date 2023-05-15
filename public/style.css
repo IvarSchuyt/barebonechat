@@ -1,22 +1,65 @@
+:root {
+  --header-font: rigid-square;
+  --main-font: yrsa;
+  --button-color: #31439c;
+  --method-detail-color: #feb51e;
+  font-size: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--header-font);
+}
+
+h1 {
+  font-size: 3.157rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2.369rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.777rem;
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 1.333rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  line-height: 30px;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Helvetica, Arial, sans-serif;
   overflow: hidden;
   min-height: 100vh;
   min-width: 100vw;
-  /* background: rgb(239, 238, 238); */
-  background: rgba(188, 105, 138, 0.5);
-  background-image: radial-gradient(
-      circle at bottom left,
-      rgba(255, 255, 0, 0.9),
-      rgba(255, 255, 0, 0) 70%
-    ),
-    radial-gradient(circle at top left, rgba(255, 0, 0, 1), rgba(255, 0, 0, 0) 70%),
-    radial-gradient(circle at center right, rgba(255, 0, 255, 0.8), rgba(255, 0, 255, 0) 50%);
-  background-size: 200% 200%;
-  animation: movement 30s ease infinite alternate-reverse;
 }
 
 @keyframes movement {
@@ -53,10 +96,7 @@ section {
   /* background: rgb(239, 238, 238); */
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(1rem);
-  border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0.8rem 0.8rem 1.6rem 0 rgba(206, 205, 205, 0.5),
-    -0.8rem -0.8rem 1.6rem 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid #c0beb9;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,14 +109,6 @@ section h1 {
   font-weight: lighter;
   text-transform: uppercase;
   font-size: 1rem;
-}
-
-section h1 span {
-  font-size: 0.5rem;
-  display: inline-block;
-  width: 4.5rem;
-  color: magenta;
-  text-transform: lowercase;
 }
 
 section ul {
@@ -95,26 +127,25 @@ section ul {
 section ul > li {
   padding: 0.5rem 1rem;
   font-size: 0.8rem;
+  font-family: yrsa;
 }
 
 section form {
   margin: 0 0 1rem 0;
   padding: 0;
   width: 18rem;
-  height: 2rem;
+  height: 4rem;
   display: flex;
+  flex-direction: column;
 }
 
-section form input[type='text'] {
+section form input[type="text"] {
   margin: 0;
   padding: 0 1rem;
   border: none;
-  height: 2rem;
+  height: 4rem;
   flex-grow: 2;
   background: rgb(239, 238, 238);
-  box-shadow: inset 0.2rem 0.2rem 0.3rem 0 rgba(209, 205, 199, 0.5);
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
   border: 0;
   opacity: 80%;
   outline: none;
@@ -122,30 +153,11 @@ section form input[type='text'] {
 
 section form > button {
   padding: 0 0.6rem 0 0.4rem;
-  width: 2rem;
-  background: rgb(239, 238, 238);
-  box-shadow: inset -0.2rem 0.2rem 0.3rem 0 rgba(209, 205, 199, 0.5);
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  background: #feb51e;
   border: 0;
   opacity: 80%;
   outline: none;
   transition: 0.2s;
-}
-
-section form > button span {
-  display: none;
-}
-
-section form > button::after {
-  content: '⇒';
-}
-
-section form > button:hover {
-  padding-left: 1rem;
-}
-
-section form > button:active {
-  padding-left: 1rem;
-  color: red;
+  height: 2rem;
+  font-family: yrsa;
 }
